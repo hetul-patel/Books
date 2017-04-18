@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>
+Login to Bookkart
+</title>
+</head>
+<body>
+ 
+<style>
+
+body
+{
+ background-image: url(images/login/batman-bob-kane-superhero-wallpaper-for-1280x800-widescreen-64-7.jpg);
+ background-size: cover
+}
+.container {
+  margin: 50px auto;
+  width: 640px;
+}
+ 
+.login {
+  position: relative;
+  margin: 270px auto;
+  padding: 50px 50px 50px;
+  width: 310px;
+}
+
+.login p.submit {
+  text-align: centre;
+}
+
+.container {
+  margin: 50px auto;
+  width: 640px;
+}
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+ 
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  
+ }
+ 
+ 
+.login input[type=text], .login input[type=password] {
+  width: 278px;
+}
+ 
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+ 
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+ 
+}
+ 
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+ 
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+}
+
+</style>
+<script>
+var attempt = 3; 
+function validate(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if ( username == "ParthBhatt05" && password == "05121996"){
+		alert ("Welcome Admin");
+		window.open("single-post.html","_blank");
+			
+		return false;
+	}
+	else if ( username == "KushanMShah" && password == "31101996"){
+		alert ("Login successfully");
+		window.open("index.html","_blank");	
+		return false;
+	}
+
+	else{
+		//attempt--;
+		alert("Invalid Username or Password, Please enter a correct Username Password");
+		
+		
+		//if( attempt == 0){
+		//	document.getElementById("username").disabled = true;
+		//	document.getElementById("password").disabled = true;
+		//	document.getElementById("submit").disabled = true;
+		//	window.open("abc.html","_blank");
+		//}
+		return false;
+	}
+}
+</script>
+<div class="container">
+  <div class="login">
+    <h1>Login</h1>
+    <form method="post" action="">
+     <p style="color:#538888">Input Username<input type="text" name="login" id="username" value="" placeholder="Username or Email"></p>
+      <p style="color:#538888">Input Password<input type="password" name="password" value="" id="password" placeholder="Password"></p>
+      <p class="submit">&nbsp;
+	  <input type="submit" name="Login" value="Login" onclick="validate()" a style="width: 290px; height: 45px;"></form>
+  </div>
+
+</body>
+</html>
